@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { map, Observable } from 'rxjs';
 import { User } from '../models/user';
@@ -23,6 +23,15 @@ export class UserService {
       this.tokenService.nextToken(token);
       return token;
       
+    }));
+  }
+
+  public logIn(test: HttpParams): Observable<any> {
+    return this.httpClient.post(this.url + '/token', test).pipe(map((token: any) => {
+      // store jwt token in local storage to keep user logged in between page refreshes
+      localStorage.setItem('token', token);
+      this.tokenService.nextToken(token);
+      return token;
     }));
   }
 
