@@ -18,4 +18,8 @@ export class UserService {
     return this.httpClient.post(this.url + '/', user);
   }
 
+  public logIn(user : User): Observable<any> {
+    return this.httpClient.post(this.url + '/loginEtudiant', user);
+  }
+
 }

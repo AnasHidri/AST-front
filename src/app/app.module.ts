@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './pages/user/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
+
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -20,10 +22,12 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatChipsModule} from '@angular/material/chips';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     HttpClientModule,
