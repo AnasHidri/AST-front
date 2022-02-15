@@ -22,6 +22,7 @@ export class UserService {
       localStorage.setItem('token', token);
       this.tokenService.nextToken(token);
       return token;
+      
     }));
   }
 
