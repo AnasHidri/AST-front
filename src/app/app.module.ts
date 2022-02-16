@@ -25,6 +25,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatChipsModule} from '@angular/material/chips';
 import { ProfileUserComponent } from './pages/user/profile-user/profile-user.component';
 import { HomeUserComponent } from './pages/user/home-user/home-user.component';
+import { NavbarComponent } from './pages/navbar/navbar.component';
 
 
 
@@ -35,6 +36,7 @@ import { HomeUserComponent } from './pages/user/home-user/home-user.component';
     LoginComponent,
     ProfileUserComponent,
     HomeUserComponent,
+    NavbarComponent,
   ],
   imports: [
     HttpClientModule,
