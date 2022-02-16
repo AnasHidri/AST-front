@@ -16,8 +16,8 @@ export class AuthUserGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const token = this.tokenService.currentToken();
-    const decodedToken= this.tokenService.decodedToken();
-    if (token && decodedToken.role=="user") {
+    console.log(token);
+    if (token =="user") {
       // logged in so return true
       return true;
     }

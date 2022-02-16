@@ -23,6 +23,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSelectModule} from '@angular/material/select';
 import {MatChipsModule} from '@angular/material/chips';
+import { ProfileUserComponent } from './pages/user/profile-user/profile-user.component';
+import { HomeUserComponent } from './pages/user/home-user/home-user.component';
 
 
 
@@ -31,6 +33,8 @@ import {MatChipsModule} from '@angular/material/chips';
     AppComponent,
     RegisterComponent,
     LoginComponent,
+    ProfileUserComponent,
+    HomeUserComponent,
   ],
   imports: [
     HttpClientModule,

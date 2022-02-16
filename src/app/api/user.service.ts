@@ -30,7 +30,10 @@ export class UserService {
     return this.httpClient.post(this.url + '/token', test).pipe(map((token: any) => {
       // store jwt token in local storage to keep user logged in between page refreshes
       localStorage.setItem('token', token);
-      this.tokenService.nextToken(token);
+      console.log(token.payload.role);
+      console.log(token.payload.userid);
+      this.tokenService.nextToken(token.payload.role);
+      
       return token;
     }));
   }

@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
           this._snackBar.open("Succes", "Close", {
             duration: 1000
           });
-          const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/register';
+          const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/user/profile';
           this.router.navigate([returnUrl]);
         },
         error: err => {

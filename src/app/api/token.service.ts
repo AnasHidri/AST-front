@@ -7,13 +7,17 @@ import { BehaviorSubject } from 'rxjs';
 export class TokenService {
 
   constructor() {
+    
     this.nextToken(localStorage.getItem("token"));
+    console.log(this.token.value);
   }
 
   //Token 
   private token = new BehaviorSubject(
     localStorage.getItem("token")
+   
   );
+
   sharedToken = this.token.asObservable();
 
   nextToken(new_Token: any) {
@@ -22,6 +26,7 @@ export class TokenService {
 
   currentToken() {
     return this.token.value;
+    
   }
 
   decodedToken() {
